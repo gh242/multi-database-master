@@ -1,0 +1,30 @@
+D:\vue.net\test\multi-database-master\.Net6\EDC\bin\Debug\netcoreapp3.1\EDC.deps.json
+D:\vue.net\test\multi-database-master\.Net6\EDC\bin\Debug\netcoreapp3.1\EDC.dll
+D:\vue.net\test\multi-database-master\.Net6\EDC\bin\Debug\netcoreapp3.1\EDC.pdb
+D:\vue.net\test\multi-database-master\.Net6\EDC\bin\Debug\netcoreapp3.1\VOL.Core.dll
+D:\vue.net\test\multi-database-master\.Net6\EDC\bin\Debug\netcoreapp3.1\VOL.Entity.dll
+D:\vue.net\test\multi-database-master\.Net6\EDC\bin\Debug\netcoreapp3.1\VOL.Core.pdb
+D:\vue.net\test\multi-database-master\.Net6\EDC\bin\Debug\netcoreapp3.1\VOL.Entity.pdb
+D:\vue.net\test\multi-database-master\.Net6\EDC\obj\Debug\netcoreapp3.1\EDC.csproj.AssemblyReference.cache
+D:\vue.net\test\multi-database-master\.Net6\EDC\obj\Debug\netcoreapp3.1\EDC.GeneratedMSBuildEditorConfig.editorconfig
+D:\vue.net\test\multi-database-master\.Net6\EDC\obj\Debug\netcoreapp3.1\EDC.AssemblyInfoInputs.cache
+D:\vue.net\test\multi-database-master\.Net6\EDC\obj\Debug\netcoreapp3.1\EDC.AssemblyInfo.cs
+D:\vue.net\test\multi-database-master\.Net6\EDC\obj\Debug\netcoreapp3.1\EDC.csproj.CoreCompileInputs.cache
+D:\vue.net\test\multi-database-master\.Net6\EDC\obj\Debug\netcoreapp3.1\EDC.csproj.CopyComplete
+D:\vue.net\test\multi-database-master\.Net6\EDC\obj\Debug\netcoreapp3.1\EDC.dll
+D:\vue.net\test\multi-database-master\.Net6\EDC\obj\Debug\netcoreapp3.1\EDC.pdb
+D:\vue.net\test\multi-database-master - 複製\.Net6\EDC\bin\Debug\netcoreapp3.1\EDC.deps.json
+D:\vue.net\test\multi-database-master - 複製\.Net6\EDC\bin\Debug\netcoreapp3.1\EDC.dll
+D:\vue.net\test\multi-database-master - 複製\.Net6\EDC\bin\Debug\netcoreapp3.1\EDC.pdb
+D:\vue.net\test\multi-database-master - 複製\.Net6\EDC\bin\Debug\netcoreapp3.1\VOL.Core.dll
+D:\vue.net\test\multi-database-master - 複製\.Net6\EDC\bin\Debug\netcoreapp3.1\VOL.Entity.dll
+D:\vue.net\test\multi-database-master - 複製\.Net6\EDC\bin\Debug\netcoreapp3.1\VOL.Core.pdb
+D:\vue.net\test\multi-database-master - 複製\.Net6\EDC\bin\Debug\netcoreapp3.1\VOL.Entity.pdb
+D:\vue.net\test\multi-database-master - 複製\.Net6\EDC\obj\Debug\netcoreapp3.1\EDC.csproj.AssemblyReference.cache
+D:\vue.net\test\multi-database-master - 複製\.Net6\EDC\obj\Debug\netcoreapp3.1\EDC.GeneratedMSBuildEditorConfig.editorconfig
+D:\vue.net\test\multi-database-master - 複製\.Net6\EDC\obj\Debug\netcoreapp3.1\EDC.AssemblyInfoInputs.cache
+D:\vue.net\test\multi-database-master - 複製\.Net6\EDC\obj\Debug\netcoreapp3.1\EDC.AssemblyInfo.cs
+D:\vue.net\test\multi-database-master - 複製\.Net6\EDC\obj\Debug\netcoreapp3.1\EDC.csproj.CoreCompileInputs.cache
+D:\vue.net\test\multi-database-master - 複製\.Net6\EDC\obj\Debug\netcoreapp3.1\EDC.csproj.CopyComplete
+D:\vue.net\test\multi-database-master - 複製\.Net6\EDC\obj\Debug\netcoreapp3.1\EDC.dll
+D:\vue.net\test\multi-database-master - 複製\.Net6\EDC\obj\Debug\netcoreapp3.1\EDC.pdb

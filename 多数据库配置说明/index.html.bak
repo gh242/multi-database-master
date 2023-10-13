@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Generator" content="EditPlus®">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <title>vol.vue多數據庫修改配置</title>
+</head>
+
+<body>
+    <div id="doc">
+        <h3>按下面步骤修改配置后，框架就能支持多數據庫訪問了，并且支持N个相同的从庫</h3>
+		<p><a href="https://gitee.com/x_discoverer/multi-database">gitee下载项目https://gitee.com/x_discoverer/multi-database</a></p>
+        <ul>
+            <li v-for="(item,index) in list" :key="index">
+                <h3>{{index+1}}. {{item.title}}</h3>
+                <p class="content" v-html="item.content"></p>
+                <p v-if="item.src"><img :src="item.src" /></p>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
+<script>
+    new Vue({
+        el: '#doc',
+        data: {
+            list: [{
+                title: "在Entity文件夹中添加ServiceEnity.cs與SysEntity.cs文件",
+                content: "直接將项目SystemModels文件夹复制過去",
+                src: "imgs/01.png"
+            }, {
+                title: "全局替换BaseEntity文件",
+                content: "將BaseEntity替换為SysEntity",
+                src: "imgs/03.png"
+            }, {
+                title: "替换BaseEntity继承",
+                content: `<p style="color:red;">第二步操作后，將BaseEntity.cs、IRepository.cs、Repository.cs、IService.cs、Service.cs五个文件圈出来的位置改成BaseEntity</p>
+                <br><img src="imgs/17.png" /><img src="imgs/18.png" /><img src="imgs/19.png" /><br><img src="imgs/20.png" /><br><img src="imgs/21.png" />`,
+                src: ""
+            }, {
+                title: "修改代码生成器模板",
+                content: "",
+                src: "imgs/04.png"
+            }, {
+                title: "添加多个DBContext",
+                content: `<p>现在分為SysDbContext(系統庫)、ReportDbContext（報表庫）、ServiceDbContext(業務庫)两个數據庫</p>
+                <p>直接將项目的EFDbContext文件夹复制過去</p>
+                <span style="color:red;">注：一个ServiceDbContext可以对應无限个相同表結构的实际數據庫，具体见ServiceDbContext.cs说明</span>`,
+                src: "imgs/06.png"
+            }, {
+                title: "删除VOLContext",
+                content: "",
+                src: "imgs/07.png"
+            }, {
+                title: "全局替换VOLContext",
+                content: "",
+                src: "imgs/05.png"
+            }, {
+                title: "替换代码生成模板",
+                content: "",
+                src: "imgs/08.png"
+            }, {
+                title: "注入DBContext",
+                content: "",
+                src: "imgs/09.png"
+            }, {
+                title: "配置數據庫信息",
+                content: `將DBServerProvider.cs复制過去
+                <p style="color:red;">將數據庫連接字符串都写入ConnectionPool字典中，字典key自己定义，value為數據庫連接字符串</p>
+                <p style="color:red;">注意：如果修改了字典key請將DBServerProvider.cs里ServiceConnectingString、GetDbConnectionString中字符串也要同時變更</p>`,
+                src: "imgs/10.png"
+            }, {
+                title: "更新代码生成器后台",
+                content: " Sys_TableInfoService.cs复制過去替换",
+                src: "imgs/11.png"
+            }, {
+                title: "更新代码生成器前端builderData.js",
+                content: "views/builder/builderData.js复制過去替换",
+                src: "imgs/12.png"
+            }, {
+                title: "替换RepositoryBase.cs文件",
+                content: "將RepositoryBase.cs文件中的SysDbContext手动替换為BaseDbContext",
+                src: "imgs/16.png"
+            }, {
+                title: "其他说明",
+                content: `<p>1、按上面的步骤，將文件复制到现有项目中正常就可以使用了，见上面12步，生成代码時就可以选择數據庫了</p>
+                <p style="color:red;">2、现在给出的文档是訪問每个數據庫独立不同的情况，实际上在不修改代码的情况下也能支持N个相同的業務庫（这个我再想想怎么写文档,或者私聊我）</p>
+                <p style="color:red;">3、这是第一版的多數據庫文档，可能表述不一定很清楚，后面会尽量完善这个文档</p>`,
+                src: ""
+            }, {
+                title: "添加更多独立數據庫",
+                content: `<p>1、VOL.Entity->SystemModels文件夹下新建一个model，名字自定义，可以参考ServiceEntity.cs</p>
+                <p>2、VOL.Core->EFDbContext下添加一个新的DbContext，名字自定义，具体配置可以参考ServiceDbContext.cs,SysDbContext.cs</p>
+                <p>3、注入刚刚新建的DbContext,具体操作见上面第9步</p>
+                <p>4、配置數據庫連接，见第10步（注意，在10步的DBServerProvider.cs文件中配置獲取數據庫字符串的屬性，见里面的ServiceConnectingString/ReportConnectingString屬性）</p>
+                <p>5、配置代码生成器后台Sys_TableInfoService.cs中CreateEntityModel方法添加<p><img src="imgs/15.png" /></p></p>
+                <p>6、配置代码生成器前端builderData.js，见下面圖片</p>`,
+                src: "imgs/14.png"
+            }]
+        }
+    })
+</script>
+<style>
+    ul {
+        list-style: none;
+    }
+    
+    li {
+        margin-bottom: 30px;
+    }
+    
+    h3 {
+        word-spacing: 0.05em;
+        font-weight: 500;
+        line-height: 1.6em;
+        margin: 1.2em 0 -1.2em;
+        padding-bottom: 1.2em;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .content {
+        color: #797a7b;
+        padding-left: 17px;
+        font-size: 14px;
+    }
+    
+    img {
+        max-width: 1000px;
+    }
+</style>
